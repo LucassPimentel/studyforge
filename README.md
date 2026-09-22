@@ -82,12 +82,13 @@ Este projeto é o "exame final" do challenge e busca demonstrar as capacidades d
 
 | Capacidade Kiro   | Onde é demonstrada no StudyForge                          |
 |-------------------|-----------------------------------------------------------|
-| Steering          | Convenções em `.kiro/steering/`                           |
-| Specs             | Spec do algoritmo de repetição espaçada em `.kiro/specs/` |
-| Hooks             | Rodar testes automaticamente ao salvar código             |
-| MCP servers       | Importar notas de arquivos locais                         |
-| Custom agents     | Agente restrito para gerar cards a partir de texto        |
-| Superfícies       | Construído no Kiro IDE + Kiro Web                          |
+| Steering              | Convenções em `.kiro/steering/`                                   |
+| Specs                 | Spec do algoritmo de repetição espaçada em `.kiro/specs/`         |
+| Hooks                 | `.kiro/hooks/` roda os testes do backend ao salvar arquivos `.cs` |
+| Property-based testing| Invariantes do SM-2 verificadas no Kiro IDE (ver spec SM-2)       |
+| MCP servers           | Importar notas de arquivos locais                                 |
+| Custom agents         | Agente restrito para gerar cards a partir de texto                |
+| Superfícies           | Construído no Kiro IDE + Kiro Web                                 |
 
 > As lições oficiais são reveladas dia a dia durante o challenge; este mapeamento
 > será ajustado conforme o conteúdo real de cada lição.

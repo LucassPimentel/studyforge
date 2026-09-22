@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Run backend tests on save",
+      "trigger": "PostFileSave",
+      "description": "Runs the .NET backend unit tests whenever a C# source file under backend/ is saved, giving fast feedback on the SM-2 scheduling and study-core services.",
+      "matcher": "backend/.*\\.cs$",
+      "action": {
+        "type": "command",
+        "command": "cd backend && dotnet test --nologo",
+        "timeout": 120
+      }
+    }
+  ]
+}

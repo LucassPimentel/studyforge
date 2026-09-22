@@ -86,3 +86,28 @@ Testes de unidade em xUnit para `SM2SchedulingService`:
 - nextReview = now + interval dias (checar com "now" fixo).
 - Grade inválida (−1, 6) lança exceção.
 - Determinismo: mesma entrada → mesma saída.
+
+## Property-based testing (IDE)
+
+Além dos testes por exemplo acima, o `SM2SchedulingService` é um alvo ideal para
+**property-based testing** (feature exclusiva do Kiro IDE): em vez de listar casos, declaramos
+regras gerais (invariantes) que devem valer para *quaisquer* entradas válidas, e a ferramenta
+gera muitas entradas aleatórias tentando violá-las.
+
+### Gerador de entradas válidas
+- `easeFactor` ∈ [1.3, 3.0], `interval` ∈ [0, 3650], `repetitions` ∈ [0, 500],
+  `grade` ∈ {0,1,2,3,4,5}, `now` qualquer `DateTime` em UTC.
+
+### Invariantes (propriedades)
+1. **easeFactor nunca abaixo do piso**: para qualquer entrada válida, o `easeFactor` de saída >= 1.3.
+2. **Erro reinicia**: para qualquer estado e qualquer grade < 3, a saída tem `repetitions == 0` e `interval == 1`.
+3. **Acerto não decresce repetitions**: para qualquer grade >= 3, `repetitions_out == repetitions_in + 1`.
+4. **Interval não-negativo**: para qualquer entrada válida, `interval` de saída >= 1 após uma revisão.
+5. **nextReview coerente**: `nextReview == now.AddDays(interval)` (mesma diferença em dias, em UTC).
+6. **Monotonicidade de facilidade**: para o mesmo estado, uma grade maior nunca produz um
+   `easeFactor` de saída menor do que uma grade menor (a fórmula SM-2 é monotônica na grade).
+7. **Determinismo**: aplicar a mesma (estado, grade, now) duas vezes produz saídas idênticas.
+8. **Grade fora de 0..5 sempre lança** (propriedade de validação).
+
+> Estas propriedades devem ser implementadas no IDE usando o suporte a property-based testing do
+> Kiro. Elas complementam — não substituem — os testes por exemplo.

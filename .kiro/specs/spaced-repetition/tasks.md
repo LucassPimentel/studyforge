@@ -32,3 +32,10 @@
   - Estado inicial; 1º/2º/3º acerto; erro reinicia; piso do easeFactor;
     nextReview correto; grade inválida lança; determinismo
   - _Requirements: 1.*, 2.*, 3.*, 4.*, 5.*, 6.*_
+
+- [ ] 8. Escrever testes property-based (Kiro IDE)
+  - Implementar as invariantes descritas em design.md (piso do easeFactor, erro reinicia,
+    acerto incrementa repetitions, interval não-negativo, nextReview coerente,
+    monotonicidade na grade, determinismo, grade inválida lança)
+  - Rodar via suporte a property-based testing do IDE
+  - _Requirements: 1.*, 2.1, 2.2, 3.*, 5.*, 6.1_
