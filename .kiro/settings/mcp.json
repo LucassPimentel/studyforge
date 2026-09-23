@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "notes-filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "./study-notes"
+      ],
+      "env": {},
+      "disabled": false,
+      "autoApprove": [
+        "list_directory",
+        "read_file"
+      ]
+    }
+  }
+}

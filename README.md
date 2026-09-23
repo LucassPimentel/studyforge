@@ -20,7 +20,6 @@ espaçada (SM-2 / Leitner). O objetivo é estudar menos tempo, lembrando por mai
 
 ## 🧩 Funcionalidades futuras / extras
 
-- Importar notas de arquivos locais (via MCP filesystem).
 - Geração de cards assistida por IA (perguntas melhores a partir do texto).
 - Estatísticas e gráficos de progresso ao longo do tempo.
 
@@ -86,7 +85,8 @@ Este projeto é o "exame final" do challenge e busca demonstrar as capacidades d
 | Specs                 | Spec do algoritmo de repetição espaçada em `.kiro/specs/`         |
 | Hooks                 | `.kiro/hooks/` roda os testes do backend ao salvar arquivos `.cs` |
 | Property-based testing| Invariantes do SM-2 verificadas no Kiro IDE (ver spec SM-2)       |
-| MCP servers           | Importar notas de arquivos locais                                 |
+| MCP servers           | Filesystem MCP lê notas de `study-notes/` (ver `docs/mcp-and-powers.md`) |
+| Powers                | Power de testes de contrato de API para validar os endpoints REST |
 | Custom agents         | Agente restrito para gerar cards a partir de texto                |
 | Superfícies           | Construído no Kiro IDE + Kiro Web                                 |
 
