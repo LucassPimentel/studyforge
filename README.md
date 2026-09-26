@@ -90,9 +90,13 @@ Este projeto é o "exame final" do challenge e busca demonstrar as capacidades d
 | Custom agents         | Agente restrito `card-generator` (ver `docs/custom-agents-and-cloud.md`) |
 | Kiro Web / cloud      | Projeto planejado em cloud session; config no repo (Configuration Sync) |
 | Superfícies           | Planejado no Kiro Web (cloud) + implementado no Kiro IDE          |
+| **Bônus: criar Power**| Power `spaced-repetition-power` empacotado em `power/` (Agent Plugins v1) |
 
 > As lições oficiais são reveladas dia a dia durante o challenge; este mapeamento
 > será ajustado conforme o conteúdo real de cada lição.
+>
+> O diretório `power/` empacota um **Kiro Power** próprio (lição bônus) e pode ser publicado
+> como repositório GitHub público independente. Ver `power/README.md`.
 
 ## 📄 Licença
 

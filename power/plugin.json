@@ -1,0 +1,15 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "spaced-repetition-power",
+  "version": "1.0.0",
+  "description": "Best practices, the SM-2 scheduling algorithm, and a notes-to-flashcards workflow for building spaced-repetition study apps. Activates on flashcard, spaced repetition, SM-2 and Leitner keywords.",
+  "license": "MIT",
+  "keywords": [
+    "flashcards",
+    "spaced-repetition",
+    "sm-2",
+    "leitner",
+    "study",
+    "anki"
+  ]
+}
