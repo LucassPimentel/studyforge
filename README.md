@@ -87,8 +87,9 @@ Este projeto é o "exame final" do challenge e busca demonstrar as capacidades d
 | Property-based testing| Invariantes do SM-2 verificadas no Kiro IDE (ver spec SM-2)       |
 | MCP servers           | Filesystem MCP lê notas de `study-notes/` (ver `docs/mcp-and-powers.md`) |
 | Powers                | Power de testes de contrato de API para validar os endpoints REST |
-| Custom agents         | Agente restrito para gerar cards a partir de texto                |
-| Superfícies           | Construído no Kiro IDE + Kiro Web                                 |
+| Custom agents         | Agente restrito `card-generator` (ver `docs/custom-agents-and-cloud.md`) |
+| Kiro Web / cloud      | Projeto planejado em cloud session; config no repo (Configuration Sync) |
+| Superfícies           | Planejado no Kiro Web (cloud) + implementado no Kiro IDE          |
 
 > As lições oficiais são reveladas dia a dia durante o challenge; este mapeamento
 > será ajustado conforme o conteúdo real de cada lição.
