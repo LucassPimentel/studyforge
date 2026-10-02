@@ -30,18 +30,28 @@ espaçada (SM-2 / Leitner). O objetivo é estudar menos tempo, lembrando por mai
 ```
 studyforge/
 ├── .kiro/
-│   ├── steering/     → convenções do projeto (stack, estilo, estrutura)
-│   ├── specs/        → specs de features (ex.: algoritmo de repetição espaçada)
-│   └── hooks/        → automações (ex.: rodar testes ao salvar)
-├── backend/          → API REST em C# (.NET) + SQLite
-│   ├── Models/       → Card, Deck, ReviewSchedule
-│   ├── Services/     → SpacedRepetitionService (núcleo lógico)
-│   ├── Controllers/  → endpoints REST
-│   └── Data/         → contexto de dados (EF Core + SQLite)
-└── frontend/         → SPA em Angular + TypeScript
-    ├── decks/        → listagem e gestão de decks
-    ├── cards/        → editor/geração de cards
-    └── review/       → sessão de revisão
+│   ├── steering/            → convenções do projeto (stack, estilo, estrutura)
+│   ├── specs/               → specs de features (spaced-repetition, study-core)
+│   └── hooks/               → automações (ex.: rodar testes ao salvar)
+├── StudyForge.sln           → solução .NET (API + domínio + testes)
+├── src/
+│   ├── StudyForge.Domain/   → algoritmo SM-2 puro (ISpacedRepetitionService)
+│   └── StudyForge.Api/      → API REST em C# (.NET 8) + EF Core + SQLite
+│       ├── Controllers/     → endpoints REST finos
+│       ├── Services/        → regra de negócio (Deck/Card/Review)
+│       ├── Entities/        → Deck, Card (EF Core)
+│       ├── Dtos/            → contratos de entrada/saída da API
+│       └── Data/            → AppDbContext + migrations
+├── tests/
+│   ├── StudyForge.Domain.Tests/ → testes do SM-2 (unidade + property-based)
+│   └── StudyForge.Api.Tests/    → testes dos services (SQLite in-memory)
+└── frontend/                → SPA em Angular + TypeScript
+    └── src/app/
+        ├── core/            → ApiService tipado + modelos compartilhados
+        └── features/
+            ├── decks/        → listagem e gestão de decks
+            ├── card-generate/→ editor/geração de cards
+            └── review/       → sessão de revisão
 ```
 
 ### Stack
@@ -57,20 +67,65 @@ e de manter durante o challenge.
 
 ---
 
-## 🚀 Como rodar (será detalhado conforme o projeto evolui)
+## 🚀 Como rodar
 
-### Backend
+### Pré-requisitos
+
+- **.NET SDK 8.0** (ver `global.json` — a versão fixada é a `8.0.131`).
+- **Node.js 18+** e **npm** (para o frontend Angular 15).
+- Nenhum banco externo: o SQLite é um arquivo local criado automaticamente.
+
+### 1. Backend (API REST)
+
+Na raiz do repositório:
+
 ```bash
-cd backend
-dotnet restore
-dotnet run
+# restaurar e compilar a solução inteira
+dotnet build
+
+# rodar a API (perfil http → http://localhost:5200)
+dotnet run --project src/StudyForge.Api --launch-profile http
 ```
 
-### Frontend
+- A API sobe em **http://localhost:5200** com o Swagger em **http://localhost:5200/swagger**.
+- Na primeira execução, as migrations do EF Core são aplicadas automaticamente e o
+  arquivo **`studyforge.db`** (SQLite) é criado em `src/StudyForge.Api/`.
+- O CORS de desenvolvimento já libera a origem do Angular (`http://localhost:4200`).
+
+### 2. Frontend (Angular)
+
+Em outro terminal:
+
 ```bash
 cd frontend
 npm install
-ng serve
+npm start          # equivale a "ng serve" → http://localhost:4200
+```
+
+- O app abre em **http://localhost:4200** e consome a API em `http://localhost:5200/api`
+  (configurado em `frontend/src/environments/environment.ts`).
+
+### 3. Fluxo ponta a ponta (MVP)
+
+Com a API e o frontend rodando:
+
+1. **Criar um deck** (ex.: "Biologia").
+2. **Gerar cards**: cole um texto com uma linha por card no formato
+   `pergunta :: resposta` (linhas sem `::` ou vazias são ignoradas; espaços sofrem trim).
+3. **Revisar**: inicie a sessão, revele a resposta e avalie com os botões estilo Anki
+   (**Errei / Difícil / Bom / Fácil** → grades 0 / 3 / 4 / 5).
+4. O card é **reagendado** pelo SM-2 e sai da lista de devidos até a próxima data.
+5. Acompanhe o **progresso** do deck (pendentes / aprendendo / dominados / devidos).
+
+### Testes
+
+```bash
+# testes do backend (domínio SM-2 + services da API)
+dotnet test
+
+# testes do frontend
+cd frontend
+npm test
 ```
 
 ---
