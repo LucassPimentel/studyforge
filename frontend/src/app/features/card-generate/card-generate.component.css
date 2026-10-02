@@ -1,0 +1,97 @@
+/* Layout da tela de geração de cards. */
+.generate {
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: system-ui, sans-serif;
+}
+
+.generate__back {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.generate__back:hover {
+  text-decoration: underline;
+}
+
+.generate__header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.generate__subtitle {
+  margin: 0.25rem 0 1.5rem;
+  color: #666;
+}
+
+.generate__subtitle code {
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  background: #f1f5f9;
+  font-size: 0.85em;
+}
+
+/* Formulário de geração */
+.generate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.generate-form__textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.generate-form__textarea[aria-invalid='true'] {
+  border-color: #d33;
+}
+
+.generate-form__hint {
+  margin: 0;
+  color: #d33;
+  font-size: 0.85rem;
+}
+
+.generate-form__button {
+  align-self: flex-start;
+  padding: 0.6rem 1.1rem;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.generate-form__button:disabled {
+  background: #9db7f0;
+  cursor: not-allowed;
+}
+
+/* Estados */
+.generate__success {
+  margin: 1rem 0;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  background: #e7f6ec;
+  color: #166534;
+}
+
+.generate__error {
+  margin: 1rem 0;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  background: #fde8e8;
+  color: #9b1c1c;
+}

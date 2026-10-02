@@ -1,0 +1,197 @@
+/* Layout da tela de sessão de revisão. */
+.review {
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: system-ui, sans-serif;
+}
+
+.review__back {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.review__header h1 {
+  margin: 0 0 1.5rem;
+  font-size: 1.6rem;
+}
+
+/* Estados auxiliares */
+.review__loading {
+  color: #666;
+}
+
+.review__error {
+  margin: 1rem 0;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  background: #fde8e8;
+  color: #9b1c1c;
+}
+
+.review__notice {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #334155;
+  text-align: center;
+}
+
+.review__notice--done {
+  background: #e7f6ec;
+  color: #166534;
+}
+
+.review__notice--error {
+  background: #fde8e8;
+  color: #9b1c1c;
+}
+
+.review__notice p {
+  margin: 0 0 0.5rem;
+}
+
+.review__link {
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* Card em revisão */
+.review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.review-card__progress {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.review-card__panel {
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.review-card__panel--answer {
+  background: #eef5ff;
+}
+
+.review-card__label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #64748b;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.review-card__question,
+.review-card__answer {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.review-card__reveal {
+  align-self: flex-start;
+  padding: 0.6rem 1.1rem;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Avaliação estilo Anki */
+.review-grades__hint {
+  margin: 0 0 0.5rem;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.review-grades__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.review-grades__button {
+  flex: 1 1 auto;
+  min-width: 5rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.review-grades__button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.review-grades__button--errei {
+  background: #dc2626;
+}
+
+.review-grades__button--dificil {
+  background: #ea580c;
+}
+
+.review-grades__button--bom {
+  background: #2563eb;
+}
+
+.review-grades__button--facil {
+  background: #16a34a;
+}
+
+.review-grades__status {
+  margin: 0.5rem 0 0;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* Feedback: próxima revisão após avaliar */
+.review-feedback {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #e7f6ec;
+  color: #166534;
+  text-align: center;
+}
+
+.review-feedback__text {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.review-feedback__next {
+  align-self: center;
+  padding: 0.55rem 1.4rem;
+  border: none;
+  border-radius: 6px;
+  background: #166534;
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+}

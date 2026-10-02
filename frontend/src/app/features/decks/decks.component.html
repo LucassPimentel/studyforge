@@ -1,0 +1,83 @@
+<!-- Tela de decks: listagem, criação e exclusão. -->
+<section class="decks">
+  <header class="decks__header">
+    <h1>Meus decks</h1>
+    <p class="decks__subtitle">Organize seu estudo por assunto.</p>
+  </header>
+
+  <!-- Formulário de criação -->
+  <form class="deck-form" [formGroup]="form" (ngSubmit)="criarDeck()">
+    <input
+      class="deck-form__input"
+      type="text"
+      placeholder="Nome do novo deck"
+      formControlName="name"
+      [attr.aria-invalid]="nameControl.invalid && nameControl.touched"
+    />
+    <button
+      class="deck-form__button"
+      type="submit"
+      [disabled]="nameControl.invalid || criando"
+    >
+      {{ criando ? 'Criando...' : 'Criar deck' }}
+    </button>
+  </form>
+
+  <p
+    class="deck-form__hint"
+    *ngIf="nameControl.touched && nameControl.invalid"
+  >
+    Informe um nome não vazio para o deck.
+  </p>
+
+  <!-- Mensagem de erro -->
+  <p class="decks__error" *ngIf="erro" role="alert">{{ erro }}</p>
+
+  <!-- Estado de carregamento -->
+  <p class="decks__loading" *ngIf="carregando">Carregando decks...</p>
+
+  <!-- Lista vazia -->
+  <p class="decks__empty" *ngIf="!carregando && decks.length === 0 && !erro">
+    Nenhum deck ainda. Crie o primeiro acima.
+  </p>
+
+  <!-- Lista de decks -->
+  <ul class="deck-list" *ngIf="!carregando && decks.length > 0">
+    <li class="deck-card" *ngFor="let deck of decks">
+      <div class="deck-card__info">
+        <span class="deck-card__name">{{ deck.name }}</span>
+        <span class="deck-card__count">{{ deck.cardCount }} card(s)</span>
+
+        <!-- Progresso (auxiliar, carregado sob demanda) -->
+        <span
+          class="deck-card__progress"
+          *ngIf="progressoDe(deck.id) as progresso"
+        >
+          pendentes {{ progresso.pending }} ·
+          aprendendo {{ progresso.learning }} ·
+          dominados {{ progresso.mastered }} ·
+          devidos {{ progresso.due }}
+        </span>
+      </div>
+
+      <div class="deck-card__actions">
+        <!-- Link para a geração de cards (CardGenerateComponent, Task 11). -->
+        <a class="deck-card__generate" [routerLink]="['/decks', deck.id, 'generate']">
+          Gerar cards
+        </a>
+        <!-- Link para a revisão (ReviewComponent é implementado na Task 12). -->
+        <a class="deck-card__review" [routerLink]="['/decks', deck.id, 'review']">
+          Revisar
+        </a>
+        <button
+          class="deck-card__delete"
+          type="button"
+          (click)="excluirDeck(deck)"
+          [disabled]="excluindoId === deck.id"
+        >
+          {{ excluindoId === deck.id ? 'Excluindo...' : 'Excluir' }}
+        </button>
+      </div>
+    </li>
+  </ul>
+</section>

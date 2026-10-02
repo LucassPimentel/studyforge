@@ -1,0 +1,101 @@
+<!-- Tela de sessão de revisão: pergunta → resposta → avaliação (SM-2). -->
+<section class="review">
+  <header class="review__header">
+    <a class="review__back" routerLink="/decks">&larr; Voltar aos decks</a>
+    <h1>Revisão</h1>
+  </header>
+
+  <!-- Estado de carregamento -->
+  <p class="review__loading" *ngIf="carregando">Carregando cards devidos...</p>
+
+  <!-- Deck inexistente (404) -->
+  <div class="review__notice review__notice--error" *ngIf="deckNaoEncontrado" role="alert">
+    <p>Deck não encontrado. Ele pode ter sido excluído.</p>
+    <a class="review__link" routerLink="/decks">Voltar aos decks</a>
+  </div>
+
+  <!-- Mensagem de erro (falhas transitórias de carga/avaliação) -->
+  <p class="review__error" *ngIf="erro && !deckNaoEncontrado" role="alert">{{ erro }}</p>
+
+  <!-- Nada devido para revisar agora -->
+  <div
+    class="review__notice"
+    *ngIf="!carregando && !deckNaoEncontrado && !erro && cards.length === 0"
+  >
+    <p>Nenhum card devido para revisar agora. Volte mais tarde!</p>
+    <a class="review__link" routerLink="/decks">Voltar aos decks</a>
+  </div>
+
+  <!-- Sessão concluída: todos os cards devidos foram avaliados -->
+  <div
+    class="review__notice review__notice--done"
+    *ngIf="!carregando && !deckNaoEncontrado && sessaoConcluida"
+    role="status"
+  >
+    <p>Revisão concluída! Você avaliou todos os cards devidos.</p>
+    <a class="review__link" routerLink="/decks">Voltar aos decks</a>
+  </div>
+
+  <!-- Card em revisão -->
+  <article
+    class="review-card"
+    *ngIf="!carregando && !deckNaoEncontrado && cardAtual as card"
+  >
+    <p class="review-card__progress">
+      Card {{ indiceAtual + 1 }} de {{ cards.length }}
+    </p>
+
+    <!-- Pergunta -->
+    <div class="review-card__panel">
+      <span class="review-card__label">Pergunta</span>
+      <p class="review-card__question">{{ card.question }}</p>
+    </div>
+
+    <!-- Ação para revelar a resposta -->
+    <button
+      class="review-card__reveal"
+      type="button"
+      *ngIf="!respostaVisivel"
+      (click)="mostrarResposta()"
+    >
+      Mostrar resposta
+    </button>
+
+    <!-- Resposta + avaliação estilo Anki -->
+    <ng-container *ngIf="respostaVisivel">
+      <div class="review-card__panel review-card__panel--answer">
+        <span class="review-card__label">Resposta</span>
+        <p class="review-card__answer">{{ card.answer }}</p>
+      </div>
+
+      <div class="review-grades" *ngIf="!ultimaAvaliacao">
+        <p class="review-grades__hint">Como foi sua lembrança?</p>
+        <div class="review-grades__buttons">
+          <button
+            *ngFor="let opcao of opcoes"
+            class="review-grades__button"
+            [ngClass]="opcao.classe"
+            type="button"
+            [disabled]="avaliando"
+            (click)="avaliar(opcao.grade)"
+          >
+            {{ opcao.rotulo }}
+          </button>
+        </div>
+        <p class="review-grades__status" *ngIf="avaliando">Salvando avaliação...</p>
+      </div>
+
+      <!-- Feedback: em quanto tempo o card será revisado novamente -->
+      <div class="review-feedback" *ngIf="ultimaAvaliacao as resultado" role="status">
+        <p class="review-feedback__text">{{ descreverProximaRevisao(resultado) }}</p>
+        <button
+          class="review-feedback__next"
+          type="button"
+          (click)="avancarAgora()"
+        >
+          Próximo card
+        </button>
+      </div>
+    </ng-container>
+  </article>
+</section>

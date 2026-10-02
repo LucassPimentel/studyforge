@@ -1,0 +1,146 @@
+/* Layout da tela de decks. */
+.decks {
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: system-ui, sans-serif;
+}
+
+.decks__header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.decks__subtitle {
+  margin: 0.25rem 0 1.5rem;
+  color: #666;
+}
+
+/* Formulário de criação */
+.deck-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.deck-form__input {
+  flex: 1;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.deck-form__input[aria-invalid='true'] {
+  border-color: #d33;
+}
+
+.deck-form__button {
+  padding: 0.6rem 1.1rem;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.deck-form__button:disabled {
+  background: #9db7f0;
+  cursor: not-allowed;
+}
+
+.deck-form__hint {
+  margin: 0.4rem 0 0;
+  color: #d33;
+  font-size: 0.85rem;
+}
+
+/* Estados */
+.decks__error {
+  margin: 1rem 0;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  background: #fde8e8;
+  color: #9b1c1c;
+}
+
+.decks__loading,
+.decks__empty {
+  margin: 1.5rem 0;
+  color: #666;
+}
+
+/* Lista de decks */
+.deck-list {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.deck-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.deck-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.deck-card__name {
+  font-weight: 600;
+}
+
+.deck-card__count {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.deck-card__progress {
+  color: #888;
+  font-size: 0.75rem;
+}
+
+.deck-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.deck-card__generate,
+.deck-card__review {
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.deck-card__generate:hover,
+.deck-card__review:hover {
+  text-decoration: underline;
+}
+
+.deck-card__delete {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #d33;
+  border-radius: 6px;
+  background: #fff;
+  color: #d33;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.deck-card__delete:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

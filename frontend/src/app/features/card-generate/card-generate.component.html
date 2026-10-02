@@ -1,0 +1,45 @@
+<!-- Tela de geração de cards a partir de texto. -->
+<section class="generate">
+  <header class="generate__header">
+    <a class="generate__back" routerLink="/decks">&larr; Voltar aos decks</a>
+    <h1>Gerar cards</h1>
+    <p class="generate__subtitle">
+      Cole um texto com uma pergunta por linha no formato
+      <code>pergunta :: resposta</code>. Linhas sem <code>::</code> ou vazias são ignoradas.
+    </p>
+  </header>
+
+  <!-- Formulário de geração -->
+  <form class="generate-form" [formGroup]="form" (ngSubmit)="gerarCards()">
+    <textarea
+      class="generate-form__textarea"
+      rows="10"
+      placeholder="Capital do Brasil :: Brasília&#10;2 + 2 :: 4"
+      formControlName="text"
+      [attr.aria-invalid]="textControl.invalid && textControl.touched"
+    ></textarea>
+
+    <p
+      class="generate-form__hint"
+      *ngIf="textControl.touched && textControl.invalid"
+    >
+      Informe um texto não vazio.
+    </p>
+
+    <button
+      class="generate-form__button"
+      type="submit"
+      [disabled]="textControl.invalid || gerando"
+    >
+      {{ gerando ? 'Gerando...' : 'Gerar cards' }}
+    </button>
+  </form>
+
+  <!-- Mensagem de sucesso -->
+  <p class="generate__success" *ngIf="criados !== null && !erro" role="status">
+    {{ criados }} card(s) criado(s) com sucesso.
+  </p>
+
+  <!-- Mensagem de erro -->
+  <p class="generate__error" *ngIf="erro" role="alert">{{ erro }}</p>
+</section>
