@@ -1,0 +1,141 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1. Criar o projeto de domínio/serviço no backend": [
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790939516339
+      },
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790939537918
+      },
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790940374723
+      }
+    ],
+    "2. Implementar `CreateInitialState`": [
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790939520622
+      },
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790940382668
+      },
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790940581551
+      }
+    ],
+    "3. Implementar validação de entrada em `ApplyReview`": [
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790939523497
+      },
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790940598754
+      },
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790940708706
+      }
+    ],
+    "4. Implementar atualização do easeFactor": [
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790939524219
+      },
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790940713457
+      },
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790940822230
+      }
+    ],
+    "5. Implementar o cálculo de repetitions e interval": [
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790939524903
+      },
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790940826833
+      },
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790940916259
+      }
+    ],
+    "6. Implementar cálculo de nextReview": [
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790939525268
+      },
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790940922283
+      },
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790941009756
+      }
+    ],
+    "7. Escrever testes de unidade (xUnit)": [
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790939525609
+      },
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790941018855
+      },
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790941235632
+      }
+    ],
+    "8. Escrever testes property-based (Kiro IDE)": [
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790939526646
+      },
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790941241170
+      },
+      {
+        "executionId": "4aee143d-8315-48e0-ae34-e3caaf0417ce",
+        "chatSessionId": "sess_d019cbe4-9d24-468e-8eb6-8ddb3b1253f2",
+        "timestamp": 1790941519761
+      }
+    ]
+  }
+}

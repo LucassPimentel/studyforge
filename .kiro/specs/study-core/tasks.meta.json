@@ -1,0 +1,301 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1. Configurar o backend .NET Web API": [
+      {
+        "executionId": "a9b3d0db-8b70-4e6c-9848-55ce4a6af592",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790942392366
+      },
+      {
+        "executionId": "a9b3d0db-8b70-4e6c-9848-55ce4a6af592",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790942402429
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790944685255
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790944749363
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790944895670
+      }
+    ],
+    "2. Definir entidades e DbContext": [
+      {
+        "executionId": "a9b3d0db-8b70-4e6c-9848-55ce4a6af592",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790942392689
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790944692287
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790944899344
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790945099260
+      }
+    ],
+    "3. Implementar DeckService + endpoints de deck": [
+      {
+        "executionId": "a9b3d0db-8b70-4e6c-9848-55ce4a6af592",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790942392934
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790944695361
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790945104427
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790945233055
+      }
+    ],
+    "4. Implementar CardService.GenerateFromText + endpoint generate": [
+      {
+        "executionId": "a9b3d0db-8b70-4e6c-9848-55ce4a6af592",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790942393409
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790944698529
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790945237784
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790945370592
+      }
+    ],
+    "5. Implementar ReviewService + endpoints de revisão": [
+      {
+        "executionId": "a9b3d0db-8b70-4e6c-9848-55ce4a6af592",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790942393601
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790944701324
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790945378423
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790945519219
+      }
+    ],
+    "6. Implementar progresso do deck": [
+      {
+        "executionId": "a9b3d0db-8b70-4e6c-9848-55ce4a6af592",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790942393752
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790944703318
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790945524443
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790945652995
+      }
+    ],
+    "7. Definir DTOs e garantir que entidades EF não sejam expostas": [
+      {
+        "executionId": "a9b3d0db-8b70-4e6c-9848-55ce4a6af592",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790942393914
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790944709553
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790945659413
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790945747299
+      }
+    ],
+    "8. Testes de unidade do backend (xUnit)": [
+      {
+        "executionId": "a9b3d0db-8b70-4e6c-9848-55ce4a6af592",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790942394103
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790944712062
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790945750907
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790946033320
+      }
+    ],
+    "9. Frontend Angular — estrutura e ApiService tipado": [
+      {
+        "executionId": "a9b3d0db-8b70-4e6c-9848-55ce4a6af592",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790942394325
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790944714276
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790946037593
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790948003799
+      }
+    ],
+    "10. Frontend — DecksComponent (listar/criar/excluir)": [
+      {
+        "executionId": "a9b3d0db-8b70-4e6c-9848-55ce4a6af592",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790942394515
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790944716054
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790948007422
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790948301985
+      }
+    ],
+    "11. Frontend — CardGenerateComponent (textarea → generate)": [
+      {
+        "executionId": "a9b3d0db-8b70-4e6c-9848-55ce4a6af592",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790942394668
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790944718651
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790948306656
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790948961638
+      }
+    ],
+    "12. Frontend — ReviewComponent (pergunta → resposta → botões Anki → grade)": [
+      {
+        "executionId": "a9b3d0db-8b70-4e6c-9848-55ce4a6af592",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790942394855
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790944720783
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790948966235
+      },
+      {
+        "executionId": "7dc09a3c-9487-4126-a05b-17c3f2a33466",
+        "chatSessionId": "sess_535eaab8-b217-4ce5-b391-aada36e8e5a0",
+        "timestamp": 1790957301380
+      },
+      {
+        "executionId": "7dc09a3c-9487-4126-a05b-17c3f2a33466",
+        "chatSessionId": "sess_535eaab8-b217-4ce5-b391-aada36e8e5a0",
+        "timestamp": 1790957585926
+      }
+    ],
+    "13. Verificação ponta a ponta (MVP)": [
+      {
+        "executionId": "a9b3d0db-8b70-4e6c-9848-55ce4a6af592",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790942394957
+      },
+      {
+        "executionId": "a919240a-52c3-44e2-adbf-37e989d93442",
+        "chatSessionId": "sess_078d7c4a-a0f7-486b-859e-0913b36b0614",
+        "timestamp": 1790944727313
+      },
+      {
+        "executionId": "d8054e0d-a430-4650-8311-14c805d16dbc",
+        "chatSessionId": "sess_66a56869-1f1e-4342-9199-366d4b47f634",
+        "timestamp": 1790957909702
+      },
+      {
+        "executionId": "d8054e0d-a430-4650-8311-14c805d16dbc",
+        "chatSessionId": "sess_66a56869-1f1e-4342-9199-366d4b47f634",
+        "timestamp": 1790958578739
+      }
+    ]
+  }
+}
